@@ -1,0 +1,2 @@
+> git push -u origin main
+fatal: unable to access 'https://github.com/mjung0845-web/Code-website.git/': Could not resolve host: github.com

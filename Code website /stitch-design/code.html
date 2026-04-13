@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth dark" lang="de"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&amp;family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-primary": "#00162b",
+                        "secondary": "#f4bb92",
+                        "surface-container-low": "#151515",
+                        "tertiary": "#ffdcbd",
+                        "primary-fixed": "#314863",
+                        "on-primary-fixed-variant": "#d1e4ff",
+                        "secondary-container": "#794e2e",
+                        "primary-container": "#b0c9e8",
+                        "on-secondary": "#301400",
+                        "on-background": "#e2e3de",
+                        "surface-dim": "#121411",
+                        "on-error": "#690005",
+                        "surface-variant": "#44474c",
+                        "error-container": "#93000a",
+                        "on-secondary-container": "#ffdcc5",
+                        "on-primary-container": "#001d35",
+                        "on-secondary-fixed": "#301400",
+                        "on-primary-fixed": "#d1e4ff",
+                        "on-error-container": "#ffdad6",
+                        "primary": "#b0c9e8",
+                        "on-tertiary-fixed": "#2c1600",
+                        "on-tertiary-container": "#ffdcbd",
+                        "surface-container-high": "#282a26",
+                        "tertiary-container": "#623f18",
+                        "surface-bright": "#383a36",
+                        "primary-fixed-dim": "#b0c9e8",
+                        "surface-container-highest": "#333531",
+                        "secondary-fixed-dim": "#f4bb92",
+                        "on-secondary-fixed-variant": "#653d1e",
+                        "secondary-fixed": "#ffdcc5",
+                        "surface-tint": "#b0c9e8",
+                        "on-surface-variant": "#c4c6cd",
+                        "error": "#ffb4ab",
+                        "outline-variant": "#44474c",
+                        "outline": "#8e9199",
+                        "inverse-surface": "#e2e3de",
+                        "inverse-on-surface": "#2f312e",
+                        "on-surface": "#e2e3de",
+                        "on-tertiary-fixed-variant": "#623f18",
+                        "tertiary-fixed-dim": "#f0bd8b",
+                        "on-primary": "#003258",
+                        "surface-container-lowest": "#0d0f0d",
+                        "tertiary-fixed": "#ffdcbd",
+                        "background": "#0a0a0a",
+                        "surface-container": "#1e201d",
+                        "on-tertiary": "#4a2800",
+                        "surface": "#0a0a0a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Newsreader"],
+                        "label": ["Manrope"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #b0c9e8 0%, #d1e4ff 100%);
+        }
+        .glass-nav {
+            background: rgba(10, 10, 10, 0.8);
+            backdrop-filter: blur(24px);
+        }
+        .text-balance {
+            text-wrap: balance;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top Navigation -->
+<nav class="fixed top-0 w-full z-50 glass-nav shadow-sm border-b border-outline-variant/10">
+<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+<a class="text-xl font-bold font-headline text-on-surface tracking-tight" href="#">RegioSocial</a>
+<div class="hidden md:flex items-center space-x-8 font-label text-sm tracking-wide">
+<a class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300" href="#leistungen">Leistungen</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300" href="#referenzen">Referenzen</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300" href="#pakete">Pakete</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300" href="#ueber-uns">Über uns</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300" href="#team">Team</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300" href="#kontakt">Kontakt</a>
+</div>
+<a class="hero-gradient text-on-primary-container px-6 py-2.5 rounded-lg font-label text-sm font-semibold transition-all duration-300 hover:scale-102 hover:opacity-90" href="#kontakt">
+                Projekt starten
+            </a>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="pt-32 pb-20 md:pt-48 md:pb-32 px-8">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+<div class="md:col-span-7 space-y-8">
+<span class="font-label text-xs uppercase tracking-widest text-secondary font-bold">Regionaler Content &amp; Marketing</span>
+<h1 class="text-6xl md:text-8xl font-headline font-bold text-on-surface leading-[1.1] text-balance">Content, der bewegt.</h1>
+<p class="text-xl md:text-2xl text-on-surface-variant max-w-xl leading-relaxed">
+                    Wir helfen Unternehmen in der Region, durch authentisches Storytelling und innovative Werbestrategien sichtbar zu werden.
+                </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<a class="hero-gradient text-on-primary-container px-8 py-4 rounded-lg font-label font-bold text-base hover:scale-102 transition-transform" href="#leistungen">
+                        Unsere Expertise
+                    </a>
+<a class="bg-surface-container-high text-on-surface px-8 py-4 rounded-lg font-label font-bold text-base hover:scale-102 transition-transform" href="#kontakt">
+                        Kostenlose Beratung
+                    </a>
+</div>
+</div>
+<div class="md:col-span-5 relative">
+<div class="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl relative z-10">
+<img alt="Team Meeting" class="w-full h-full object-cover" data-alt="Modern creative agency team meeting in a sunlit industrial loft office with regional wood accents and digital screens" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAQvIZxQUwVcG2lkQD-5sfBrBW5s0_znJyeS3-H1zORhLEpJS_-r_uwjvKm_Slv_vQekxb5IPPAXGwoS8-K9Yfilv6gSKe1qQib7GTJUGq-VoHtIHCqb0rwP7QuEZtN_RJNeDhQVua1PfwYqTNwBeNzwgpYTa_g7HplAEF50oO_vjYqA-fICXDpKYr5paap8YQozFMCcG--7hkhKEu-HH_rMTsCaDhVR3PfVLbqCueB-fKLAZG7vJ2BjlxR8NB8k4InaGxPtggnfQ"/>
+</div>
+<div class="absolute -bottom-6 -left-6 w-32 h-32 bg-secondary-container rounded-2xl -z-10 opacity-30"></div>
+<div class="absolute -top-6 -right-6 w-48 h-48 border-2 border-outline-variant rounded-full -z-10 opacity-20"></div>
+</div>
+</div>
+</section>
+<!-- Referenzen Section -->
+<section class="py-24 bg-surface-container-low" id="referenzen">
+<div class="max-w-7xl mx-auto px-8">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+<div class="space-y-4">
+<span class="font-label text-xs uppercase tracking-widest text-secondary">Referenzen</span>
+<h2 class="text-4xl md:text-5xl font-headline font-bold text-on-surface">Content, der performt.</h2>
+</div>
+<p class="text-on-surface-variant font-body text-lg max-w-md">
+                    Wir setzen Brands in Szene. Unsere Produktionen kombinieren lokales Vertrauen mit modernster Technik.
+                </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Phone Mockup 1 -->
+<div class="group relative aspect-[9/16] bg-surface-container-highest rounded-[3rem] p-3 shadow-2xl overflow-hidden hover:scale-102 transition-transform duration-500 border border-outline-variant/20">
+<div class="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity z-20 flex items-end p-8">
+<p class="text-on-surface font-headline text-xl">Fashion Brand Campaign</p>
+</div>
+<img alt="Reference 1" class="w-full h-full object-cover rounded-[2.5rem]" data-alt="High-quality vertical video screen on a smartphone showing energetic social media content for a regional brand" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPeiTZIKMQSVCOY9c81VOGooYALwY1vo58VTv7_JFWUCr9uwI-W5tiTmZ6y8Dr5UTH1l67-svyZmY_7dKLMAFLj_QdXJnOEzoWiizm_Br-MbIiq56GB8aPEgmB-LetT6Yb2euVWCwj6chdnzf_VccBbrGO8j9vYtn9b__HZg5fl9ZIRg5ZSMKV66w2lh6nOhC-6KVjQEoHFLn6T0MMaatHCwLT20jDLCWbQx1sXD9OHRAGIT4WVCHMjC-qj55Qj0W2s0hWeoJrjTs"/>
+</div>
+<!-- Phone Mockup 2 -->
+<div class="group relative aspect-[9/16] bg-surface-container-highest rounded-[3rem] p-3 shadow-2xl overflow-hidden translate-y-12 hover:scale-102 transition-transform duration-500 border border-outline-variant/20">
+<div class="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity z-20 flex items-end p-8">
+<p class="text-on-surface font-headline text-xl">Lokal Handwerk Story</p>
+</div>
+<img alt="Reference 2" class="w-full h-full object-cover rounded-[2.5rem]" data-alt="Professional BTS shot of a high-tech camera rig filming a craftsman in a traditional workshop environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGrKi87Nglmh7iOjoY1pOz-TrxdBLMGFADCgElM7V-rXPuJpEle4s44Lzn2-jISrLfSkog-Ncjn46E7c0ajfPpgEEmAll9C3QXdPHOePffeCR3xUEm61Jf84r4VkRnmNFKngi0K4C1EqriqwwEiGaZQ37GJ2doUQ0e_9zDpq9DrxnBqKTiJrAtdl6o_P5NRBJV5JZTZBzRlx28bckDjIYcUS5PKHIhsfj-ebKv0ClupBn1as_61gBcSgNT32wtsbtXw-MajdRhbrE"/>
+</div>
+<!-- Phone Mockup 3 -->
+<div class="group relative aspect-[9/16] bg-surface-container-highest rounded-[3rem] p-3 shadow-2xl overflow-hidden hover:scale-102 transition-transform duration-500 border border-outline-variant/20">
+<div class="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity z-20 flex items-end p-8">
+<p class="text-on-surface font-headline text-xl">Tech Startup Ad</p>
+</div>
+<img alt="Reference 3" class="w-full h-full object-cover rounded-[2.5rem]" data-alt="Vibrant motion graphics and animation still shown on a vertical smartphone screen for a digital marketing agency" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZ_UjSLTBsOkOMy-xvmPg25odMc_ZNHKuoM4e9sVFolQkfeM95_MIQxRH0K2w43g9WO8wbvkckiiLqf2D-Yk5usRn6FQcz7SgOJ2y-Pzvvwaotxp-ClwggbUb5tKYfXWMxGPBP7FgQspXjA82x2hvMtQIXRlQ2MHksx_ZOHek939JDGkh8htPXEpIEEgnRza3oOilwavqaC9s9g-8rcuQm_FJCjQvZ4GcjDDbx3h7-dB1foqtF9TwcddO6Ia6JCPhEJ1Dt0zJ2sto"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Leistungen Section -->
+<section class="py-32 bg-surface" id="leistungen">
+<div class="max-w-7xl mx-auto px-8">
+<div class="text-center mb-20">
+<h2 class="text-4xl md:text-6xl font-headline font-bold text-on-surface mb-6">Was wir für dich tun</h2>
+<div class="w-24 h-1 bg-secondary mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<div class="bg-surface-container-lowest p-8 rounded-2xl hover:bg-surface-container-high transition-colors duration-300 border border-outline-variant/10">
+<span class="material-symbols-outlined text-4xl text-primary mb-6" data-icon="auto_videocam" data-weight="fill">auto_videocam</span>
+<h3 class="font-headline text-xl font-bold mb-4">Organischer Social Media Content</h3>
+<p class="text-on-surface-variant leading-relaxed">Videos, die viral gehen und deine Community wirklich erreichen.</p>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-2xl hover:bg-surface-container-high transition-colors duration-300 border border-outline-variant/10">
+<span class="material-symbols-outlined text-4xl text-primary mb-6" data-icon="edit_note" data-weight="fill">edit_note</span>
+<h3 class="font-headline text-xl font-bold mb-4">Content-Planung &amp; Skript</h3>
+<p class="text-on-surface-variant leading-relaxed">Strategische Konzepte, die deine Botschaft punktgenau transportieren.</p>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-2xl hover:bg-surface-container-high transition-colors duration-300 border border-outline-variant/10">
+<span class="material-symbols-outlined text-4xl text-primary mb-6" data-icon="movie_edit" data-weight="fill">movie_edit</span>
+<h3 class="font-headline text-xl font-bold mb-4">Professioneller Schnitt &amp; Animationen</h3>
+<p class="text-on-surface-variant leading-relaxed">High-End Postproduction für den perfekten digitalen Glanz.</p>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-2xl hover:bg-surface-container-high transition-colors duration-300 border border-outline-variant/10">
+<span class="material-symbols-outlined text-4xl text-primary mb-6" data-icon="ads_click" data-weight="fill">ads_click</span>
+<h3 class="font-headline text-xl font-bold mb-4">Meta Ads Management</h3>
+<p class="text-on-surface-variant leading-relaxed">Präzises Targeting für maximale Conversion und ROI.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Pakete Section -->
+<section class="py-24 bg-surface-container-low" id="pakete">
+<div class="max-w-7xl mx-auto px-8">
+<div class="text-center mb-16 space-y-4">
+<h2 class="text-4xl md:text-5xl font-headline font-bold text-on-surface">Transparente Pakete.</h2>
+<p class="text-on-surface-variant text-lg">Maximaler Mehrwert für jedes Wachstumsstadium.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Starter -->
+<div class="bg-surface-container-lowest p-10 rounded-3xl flex flex-col border border-outline-variant/10">
+<h3 class="font-headline text-2xl font-bold mb-2">Starter</h3>
+<p class="text-secondary font-label text-sm uppercase tracking-wider mb-8">Einstieg in Sichtbarkeit</p>
+<ul class="space-y-4 mb-10 flex-grow">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-green-400 text-sm">check_circle</span>
+<span class="text-on-surface-variant">4 Professionelle Videos / Monat</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-green-400 text-sm">check_circle</span>
+<span class="text-on-surface-variant">Konzept &amp; Skripting</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-green-400 text-sm">check_circle</span>
+<span class="text-on-surface-variant">Social Media Optimierung</span>
+</li>
+</ul>
+<a class="w-full text-center py-4 bg-surface-container-high rounded-xl font-label font-bold text-on-surface hover:bg-primary hover:text-on-primary transition-all" href="#kontakt">Anfragen</a>
+</div>
+<!-- Growth -->
+<div class="bg-surface-container-highest p-10 rounded-3xl flex flex-col scale-105 shadow-2xl relative border-2 border-primary">
+<div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-secondary text-on-secondary px-4 py-1 rounded-full text-xs font-bold font-label uppercase tracking-widest">Beliebteste Wahl</div>
+<h3 class="font-headline text-2xl font-bold mb-2 text-primary">Growth</h3>
+<p class="text-on-surface-variant font-label text-sm uppercase tracking-wider mb-8">Schneller wachsen</p>
+<ul class="space-y-4 mb-10 flex-grow">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span>
+<span class="text-on-surface">8 Professionelle Videos / Monat</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span>
+<span class="text-on-surface">Erweiterte Postproduction</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span>
+<span class="text-on-surface">Wöchentliches Feedback-Call</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span>
+<span class="text-on-surface">Untertitel &amp; Animationen</span>
+</li>
+</ul>
+<a class="w-full text-center py-4 hero-gradient rounded-xl font-label font-bold text-on-primary-container hover:scale-102 transition-all" href="#kontakt">Jetzt durchstarten</a>
+</div>
+<!-- Pro -->
+<div class="bg-surface-container-lowest p-10 rounded-3xl flex flex-col border border-outline-variant/10">
+<h3 class="font-headline text-2xl font-bold mb-2">Pro</h3>
+<p class="text-secondary font-label text-sm uppercase tracking-wider mb-8">Maximale Dominanz</p>
+<ul class="space-y-4 mb-10 flex-grow">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-green-400 text-sm">check_circle</span>
+<span class="text-on-surface-variant">12 Professionelle Videos / Monat</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-green-400 text-sm">check_circle</span>
+<span class="text-on-surface-variant">Full-Service Management</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-green-400 text-sm">check_circle</span>
+<span class="text-on-surface-variant">Ads Strategie Inklusive</span>
+</li>
+</ul>
+<a class="w-full text-center py-4 bg-surface-container-high rounded-xl font-label font-bold text-on-surface hover:bg-primary hover:text-on-primary transition-all" href="#kontakt">Kontakt aufnehmen</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Über Uns Section -->
+<section class="py-32 bg-surface" id="ueber-uns">
+<div class="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+<div class="relative order-2 lg:order-1">
+<div class="aspect-square rounded-full overflow-hidden border-[12px] border-surface-container-low">
+<img alt="Technology Meets Tradition" class="w-full h-full object-cover" data-alt="Close-up of high-quality camera lens and filmmaking equipment reflecting a warm, cozy office interior" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlJUlPzZccGhp4JJCKpwVXNGZHWuITMsk8uhbaFsSpoBw0Grep0iw_WpQkxhLnocSv_UZmCuWK0789abGQKpIIw06EhwOFlS_Dx8OoyC45Vw3AQyD0LRvp7mfw8ADvFMIEp8HO7pUBpwBpMBbLxhsga1GCTI73XNBFtTItdTS5A0ukFT93RMRT4iAUmjTcRXTCUFgATkQhbK4mkCaBJ-DLWZO3auEFnjV_ZMwsMu7X3pIdPREfglrRUsktO2dnpltFujRLplbEQoo"/>
+</div>
+<div class="absolute -top-10 -left-10 bg-secondary text-on-secondary p-8 rounded-2xl hidden md:block">
+<p class="font-headline text-4xl font-bold">100+</p>
+<p class="font-label text-xs uppercase tracking-widest opacity-80">Projekte realisiert</p>
+</div>
+</div>
+<div class="space-y-8 order-1 lg:order-2">
+<span class="font-label text-xs uppercase tracking-widest text-secondary">Unsere Story</span>
+<h2 class="text-4xl md:text-5xl font-headline font-bold text-on-surface leading-tight">Wir sind mehr als eine Agentur.</h2>
+<p class="text-lg text-on-surface-variant leading-relaxed italic">
+                    "Verwurzelt in der Region, vernetzt mit der digitalen Zukunft. Wir verstehen, dass echtes Marketing nicht nur aus Klicks, sondern aus echtem Vertrauen besteht."
+                </p>
+<p class="text-on-surface-variant leading-relaxed">
+                    Als regionales Team kombinieren wir die Wärme und Zuverlässigkeit lokaler Werte mit der Agilität und Präzision moderner High-Tech-Lösungen. Wir sind deine Partner auf Augenhöhe.
+                </p>
+<div class="flex items-center gap-6 pt-4">
+<div class="h-px flex-grow bg-outline-variant"></div>
+<span class="font-headline font-bold text-on-surface">RegioSocial Philosophy</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Team Section -->
+<section class="py-24 bg-surface-container-low" id="team">
+<div class="max-w-7xl mx-auto px-8">
+<div class="text-center mb-20 space-y-4">
+<h2 class="text-4xl md:text-5xl font-headline font-bold text-on-surface">Zwei Köpfe. Eine Vision.</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16 max-w-4xl mx-auto">
+<div class="text-center group">
+<div class="aspect-square rounded-3xl overflow-hidden mb-6 grayscale group-hover:grayscale-0 transition-all duration-500 shadow-xl border border-outline-variant/10">
+<img alt="Moritz Jung" class="w-full h-full object-cover" data-alt="Portrait of Moritz Jung, a professional male creative director in a stylish neutral-colored studio setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYF0Tt7yPGP6gjXETLyicud7Ff4En1SxUe_FrZm0aFIFfZBO_qNaURINFPnQM7V15NduRp56DI5gUX_THwVSRSvChvrH9Xfssra92LvONb3FTNp--LSaMb90Im50P2ex7iFnIpV8HVrLAvFboSsZa1om6iUVlVD8a16KRaz424xvDH35mCOCTkLBuW0CxLKuUs0T7NjyHCY8c0arKK8WKg1ro692Wfbm55gAfAXOS0vrE4rXo-z9T-99syIqwIzjObKxUWOgwFoQc"/>
+</div>
+<h3 class="font-headline text-2xl font-bold text-on-surface">Moritz Jung</h3>
+<p class="font-label text-secondary uppercase tracking-widest text-sm mt-2">Strategie &amp; Innovation</p>
+</div>
+<div class="text-center group">
+<div class="aspect-square rounded-3xl overflow-hidden mb-6 grayscale group-hover:grayscale-0 transition-all duration-500 shadow-xl border border-outline-variant/10">
+<img alt="Robin Hellenschmidt" class="w-full h-full object-cover" data-alt="Portrait of Robin Hellenschmidt, a professional male content producer with high-end camera gear in background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBl0vCT3WEU7U5DkhC2jHHlTpOGtmoP-5D7UpiFD6cp5TC7LDet1aaUecGNhbWdAcgtOCyPCDpBHH3HNjkeCrfej1P65-8xK8zFKYXU5poNDGp7-9sqvaC4y-oITk6io16EyvQfgd6huC82CF86b1FyjTL8a5cb48wEbBum6pZabUuAxNlWShXGw7FD3ZsUebKO-Tqa0RvEw-4hw5LWP4lqH-JSKHBkCG9L7fWkAZA4taupjmCY81XhEbuj13Yup76ADySAGQA_WDE"/>
+</div>
+<h3 class="font-headline text-2xl font-bold text-on-surface">Robin Hellenschmidt</h3>
+<p class="font-label text-secondary uppercase tracking-widest text-sm mt-2">Content &amp; Produktion</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Prozess Section -->
+<section class="py-32 bg-surface overflow-hidden">
+<div class="max-w-7xl mx-auto px-8">
+<h2 class="text-4xl md:text-5xl font-headline font-bold text-on-surface mb-20 text-center">So arbeiten wir</h2>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4 relative">
+<div class="hidden md:block absolute top-12 left-0 w-full h-px bg-outline-variant/30 -z-10"></div>
+<!-- Step 01 -->
+<div class="bg-surface p-6 space-y-6">
+<div class="w-12 h-12 bg-primary text-on-primary rounded-full flex items-center justify-center font-headline font-bold text-xl">01</div>
+<h4 class="font-headline text-xl font-bold">Erstgespräch</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed">Wir analysieren deine Ziele und den regionalen Markt.</p>
+</div>
+<!-- Step 02 -->
+<div class="bg-surface p-6 space-y-6">
+<div class="w-12 h-12 bg-primary text-on-primary rounded-full flex items-center justify-center font-headline font-bold text-xl">02</div>
+<h4 class="font-headline text-xl font-bold">Strategie</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed">Ein maßgeschneiderter Content-Plan wird entwickelt.</p>
+</div>
+<!-- Step 03 -->
+<div class="bg-surface p-6 space-y-6">
+<div class="w-12 h-12 bg-primary text-on-primary rounded-full flex items-center justify-center font-headline font-bold text-xl">03</div>
+<h4 class="font-headline text-xl font-bold">Produktion</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed">Wir drehen vor Ort mit modernstem Equipment.</p>
+</div>
+<!-- Step 04 -->
+<div class="bg-surface p-6 space-y-6">
+<div class="w-12 h-12 bg-primary text-on-primary rounded-full flex items-center justify-center font-headline font-bold text-xl">04</div>
+<h4 class="font-headline text-xl font-bold">Launch</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed">Optimierte Ausspielung für maximale Reichweite.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Kontakt Section -->
+<section class="py-24 bg-surface-container-high" id="kontakt">
+<div class="max-w-7xl mx-auto px-8">
+<div class="bg-surface-container-lowest rounded-[3rem] overflow-hidden shadow-2xl grid grid-cols-1 lg:grid-cols-2">
+<div class="p-12 md:p-20 space-y-12">
+<div>
+<h2 class="text-4xl md:text-5xl font-headline font-bold text-on-surface mb-6">Lass uns zusammenarbeiten.</h2>
+<p class="text-on-surface-variant text-lg">Erzähl uns von deinem Projekt. Wir antworten in der Regel innerhalb von 24 Stunden.</p>
+</div>
+<div class="space-y-6">
+<a class="flex items-center gap-4 group" href="mailto:hello@regiosocial.de">
+<div class="w-12 h-12 rounded-full bg-surface-container-low flex items-center justify-center group-hover:bg-primary group-hover:text-on-primary transition-all">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<div>
+<p class="text-xs font-label uppercase tracking-widest text-secondary font-bold">Email</p>
+<p class="font-headline text-lg font-bold">hello@regiosocial.de</p>
+</div>
+</a>
+<a class="flex items-center gap-4 group" href="#">
+<div class="w-12 h-12 rounded-full bg-surface-container-low flex items-center justify-center group-hover:bg-green-500 group-hover:text-white transition-all">
+<span class="material-symbols-outlined">chat</span>
+</div>
+<div>
+<p class="text-xs font-label uppercase tracking-widest text-secondary font-bold">WhatsApp</p>
+<p class="font-headline text-lg font-bold">Direkt Chatten</p>
+</div>
+</a>
+</div>
+</div>
+<div class="p-12 md:p-20 bg-surface-container-low/50">
+<form action="#" class="space-y-6">
+<div class="space-y-2">
+<label class="font-label text-sm font-bold text-on-surface">Name</label>
+<input class="w-full bg-surface-container-highest border-0 rounded-xl p-4 focus:ring-2 focus:ring-primary transition-all text-on-surface" placeholder="Dein Name" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label text-sm font-bold text-on-surface">Email</label>
+<input class="w-full bg-surface-container-highest border-0 rounded-xl p-4 focus:ring-2 focus:ring-primary transition-all text-on-surface" placeholder="deine@mail.de" type="email"/>
+</div>
+<div class="space-y-2">
+<label class="font-label text-sm font-bold text-on-surface">Projekt Details</label>
+<textarea class="w-full bg-surface-container-highest border-0 rounded-xl p-4 focus:ring-2 focus:ring-primary transition-all text-on-surface" placeholder="Wie können wir dir helfen?" rows="4"></textarea>
+</div>
+<button class="w-full hero-gradient text-on-primary-container font-label font-bold py-4 rounded-xl hover:shadow-lg hover:scale-101 transition-all" type="submit">Nachricht senden</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-container-low pt-20 pb-10 px-8">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
+<div class="space-y-6">
+<a class="text-2xl font-bold font-headline text-on-surface" href="#">RegioSocial</a>
+<p class="text-on-surface-variant text-sm leading-relaxed">
+                        Die Agentur für regionalen Content mit digitaler Exzellenz. Wir verbinden Marken mit Menschen.
+                    </p>
+</div>
+<div>
+<h5 class="font-label text-xs uppercase tracking-widest text-primary font-bold mb-6">Navigation</h5>
+<ul class="space-y-3 font-body">
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#leistungen">Leistungen</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#referenzen">Referenzen</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#pakete">Pakete</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#ueber-uns">Über uns</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-label text-xs uppercase tracking-widest text-primary font-bold mb-6">Rechtliches</h5>
+<ul class="space-y-3 font-body">
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Impressum</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Datenschutz</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">AGB</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-label text-xs uppercase tracking-widest text-primary font-bold mb-6">Social Media</h5>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-all" href="#">
+<span class="material-symbols-outlined text-sm">link</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-all" href="#">
+<span class="material-symbols-outlined text-sm">share</span>
+</a>
+</div>
+</div>
+</div>
+<div class="pt-8 border-t border-outline-variant/30 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant">© 2024 RegioSocial Agency. Alle Rechte vorbehalten.</p>
+<p class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant">Design with Precision</p>
+</div>
+</div>
+</footer>
+</body></html>
